@@ -14,5 +14,6 @@ app.get('/health', (_req, res) => {
 //app.use('/api/products', productsRouter)
 
 // Local dev
-export default app;
-
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
