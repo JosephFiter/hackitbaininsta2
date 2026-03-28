@@ -17,4 +17,4 @@ if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => console.log(`API corriendo en http://localhost:${PORT}`))
 }
 
-export default app
+module.exports = app; // Vercel necesita esto
