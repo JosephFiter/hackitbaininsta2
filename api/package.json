@@ -1,10 +1,10 @@
 {
   "name": "pedidos-mayoristas-api",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
 "scripts": {
-    "dev": "node --watch app.js",
-    "start": "node app.js"
+    "dev": "node --watch index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.21.2"
