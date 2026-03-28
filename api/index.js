@@ -1,20 +1,22 @@
-const express = require('express')
-const productsRouter = require('./src/routes/products')
-
-const app = express()
-
+import express from 'express';
+//import productsRouter from "./src/routes/products"
+const app = express();
+//const productsRouter = productsRouter()
+const port = 3000;
 app.use(express.json())
-
+app.get('/', (_req, res) => {
+  res.json({ status: 'HOLA' })
+})
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok' })
 })
 
-app.use('/api/products', productsRouter)
+//app.use('/api/products', productsRouter)
 
 // Local dev
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 3000
-  app.listen(PORT, () => console.log(`API corriendo en http://localhost:${PORT}`))
-}
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
 
-module.exports = app
+export default app;
+
