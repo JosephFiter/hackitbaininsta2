@@ -1,5 +1,5 @@
-import express from 'express'
-import productsRouter from './src/routes/products.js'
+const express = require('express')
+const productsRouter = require('./src/routes/products')
 
 const app = express()
 
@@ -17,4 +17,4 @@ if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => console.log(`API corriendo en http://localhost:${PORT}`))
 }
 
-module.exports = app; // Vercel necesita esto
+module.exports = app

@@ -1,8 +1,7 @@
 {
   "name": "pedidos-mayoristas-api",
   "version": "1.0.0",
-  "type": "module",
-  "scripts": {
+"scripts": {
     "dev": "node --watch index.js",
     "start": "node index.js"
   },
